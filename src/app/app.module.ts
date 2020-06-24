@@ -8,7 +8,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
@@ -18,8 +19,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
   ],
   providers: [],
   bootstrap: [
-    AppComponent,
-    NavigationComponent
+    AppComponent
   ]
 })
 export class AppModule { }
