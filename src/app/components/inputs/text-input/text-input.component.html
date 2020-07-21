@@ -1,0 +1,40 @@
+<mat-form-field>
+  <input [min]="min" [max]="max" [type]="type" autocomplete="off" matInput [placeholder]="placeholder"
+    [formControl]="control" [id]="placeholder.toLowerCase()" />
+
+  <button matSuffix *ngIf="clearable && control?.value" mat-icon-button (click)="onClear()" tabindex="-1"
+    [id]="placeholder.toLowerCase() + '_' + 'clear'">
+    <mat-icon>clear</mat-icon>
+  </button>
+  <button matSuffix *ngIf="removable" mat-icon-button (click)="onRemove()" tabindex="-1"
+    [id]="placeholder.toLowerCase() + '_' + 'remove'" color="warn">
+    <mat-icon>delete_outline</mat-icon>
+  </button>
+  <mat-error *ngIf="control?.hasError('email') && !control.hasError('required')">
+    Please enter a valid email address
+  </mat-error>
+  <mat-error *ngIf="control?.hasError('maxlength')">
+    The maximum length for {{ placeholder.toLowerCase() }} is
+    {{ control.getError('maxlength').requiredLength }} characters
+  </mat-error>
+  <mat-error *ngIf="control?.hasError('minlength')">
+    The minimum length for {{ placeholder.toLowerCase() }} is
+    {{ control.getError('minlength').requiredLength }} characters
+  </mat-error>
+  <mat-error *ngIf="control?.hasError('required')">
+    {{ placeholder }} is <strong>required</strong>
+  </mat-error>
+  <mat-error *ngIf="control?.hasError('pattern')">
+    {{ placeholder }} does not match the required pattern
+  </mat-error>
+  <mat-hint *ngIf="
+      hint &&
+      (!control?.hasError('required') ||
+        !control?.hasError('email') ||
+        !control?.hasError('minLength') ||
+        !control?.hasError('maxLength') ||
+        !control?.hasError('pattern'))
+    ">
+    {{ hint }}
+  </mat-hint>
+</mat-form-field>
