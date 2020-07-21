@@ -1,6 +1,15 @@
 <mat-form-field>
-  <input #x readonly (click)="picker.open()" matInput [matDatepicker]="picker" [placeholder]="placeholder"
-    [formControl]="control" [min]="minAllowedDate" [max]="maxAllowedDate" />
+  <input
+    #x
+    readonly
+    (click)="picker.open()"
+    matInput
+    [matDatepicker]="picker"
+    [placeholder]="placeholder"
+    [formControl]="control"
+    [min]="minAllowedDate"
+    [max]="maxAllowedDate"
+  />
   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
   <mat-datepicker #picker></mat-datepicker>
   <mat-error *ngIf="control.hasError('required') || control.hasError('matDatepickerMin')">

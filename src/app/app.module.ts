@@ -8,10 +8,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { AppCommonModule } from './app-common.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavigationComponent
-  ],
+  declarations: [AppComponent, NavigationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,8 +17,6 @@ import { AppCommonModule } from './app-common.module';
     AppCommonModule
   ],
   providers: [],
-  bootstrap: [
-    AppComponent
-  ]
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

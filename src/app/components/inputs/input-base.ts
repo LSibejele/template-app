@@ -3,22 +3,22 @@ import { FormControl } from '@angular/forms';
 import { Subject } from 'rxjs';
 
 export class InputBase {
-    @Input()
-    control: FormControl = new FormControl();
+  @Input()
+  control: FormControl = new FormControl();
 
-    @Input()
-    removable = false;
+  @Input()
+  removable = false;
 
-    @Output()
-    remove = new Subject();
+  @Output()
+  remove = new Subject();
 
-    @Input()
-    placeholder: string;
+  @Input()
+  placeholder: string;
 
-    @Input()
-    hint: string;
+  @Input()
+  hint: string;
 
-    onRemove() {
-        this.remove.next();
-    }
+  onRemove() {
+    this.remove.next();
+  }
 }

@@ -11,9 +11,8 @@ describe('TextInputComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TextInputComponent ]
-    })
-    .compileComponents();
+      declarations: [TextInputComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

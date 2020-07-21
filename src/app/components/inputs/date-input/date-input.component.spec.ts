@@ -11,9 +11,8 @@ describe('DateInputComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DateInputComponent ]
-    })
-    .compileComponents();
+      declarations: [DateInputComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
